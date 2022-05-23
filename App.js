@@ -1,10 +1,12 @@
 import { StyleSheet, Text, View } from "react-native";
-import Header from "./components/header";
+import Header from "./components/Header";
+import Todos from "./components/Todos";
 
 export default function App() {
   return (
     <View style={styles.appContainer}>
       <Header />
+      <Todos />
     </View>
   );
 }

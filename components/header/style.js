@@ -4,6 +4,8 @@ export default StyleSheet.create({
   headerContainer: {
     flexDirection: "row",
     alignItems: "center",
+    marginTop: 30,
+    marginBottom: 20,
   },
   todoInput: {
     flex: 1,
