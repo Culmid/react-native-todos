@@ -1,11 +1,18 @@
-import { View, Text } from "react-native";
+import { View, Text, Pressable, Switch } from "react-native";
 import React from "react";
 import styles from "./style";
 
-export default function Todo({ id, text, isComplete }) {
+export default function Todo({ id, text, isComplete, onToggleTodo }) {
+  function onTodoPress() {
+    onToggleTodo(id);
+  }
+
   return (
-    <View style={styles.todoContainer}>
-      <Text style={styles.todoTitle}>{text}</Text>
-    </View>
+    <Pressable onPress={onTodoPress}>
+      <View style={styles.todoContainer}>
+        <Text style={styles.todoTitle}>{text}</Text>
+        <Switch value={isComplete} />
+      </View>
+    </Pressable>
   );
 }

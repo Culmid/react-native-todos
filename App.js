@@ -14,10 +14,14 @@ export default function App() {
     ]);
   }
 
+  function onToggleTodo(id) {
+    console.log(id);
+  }
+
   return (
     <View style={styles.appContainer}>
       <Header onAddTodo={onAddTodo} />
-      <Todos todos={todos} />
+      <Todos todos={todos} onToggleTodo={onToggleTodo} />
     </View>
   );
 }
