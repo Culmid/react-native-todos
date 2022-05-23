@@ -15,7 +15,11 @@ export default function App() {
   }
 
   function onToggleTodo(id) {
-    console.log(id);
+    setTodos((oldState) =>
+      oldState.map((todo) =>
+        todo.id === id ? { ...todo, isComplete: !todo.isComplete } : todo
+      )
+    );
   }
 
   return (
