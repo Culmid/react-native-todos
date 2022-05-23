@@ -22,10 +22,18 @@ export default function App() {
     );
   }
 
+  function onDeleteTodo(id) {
+    setTodos((oldState) => oldState.filter((todo) => todo.id !== id));
+  }
+
   return (
     <View style={styles.appContainer}>
       <Header onAddTodo={onAddTodo} />
-      <Todos todos={todos} onToggleTodo={onToggleTodo} />
+      <Todos
+        todos={todos}
+        onToggleTodo={onToggleTodo}
+        onDeleteTodo={onDeleteTodo}
+      />
     </View>
   );
 }
@@ -33,7 +41,7 @@ export default function App() {
 const styles = StyleSheet.create({
   appContainer: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#add8e6",
     alignItems: "center",
     justifyContent: "center",
     padding: 20,

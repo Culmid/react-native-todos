@@ -6,5 +6,6 @@ export default StyleSheet.create({
     width: "100%",
     borderColor: "#000",
     borderWidth: 2,
+    borderRadius: 15,
   },
 });
