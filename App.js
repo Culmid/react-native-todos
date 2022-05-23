@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import Header from "./components/Header";
 import Todos from "./components/Todos";
+import uuid from "react-native-uuid";
 
 export default function App() {
   const [todos, setTodos] = useState([]);
 
   function onAddTodo(text) {
-    setTodos((oldState) => [...oldState, text]);
+    setTodos((oldState) => [
+      ...oldState,
+      { id: uuid.v4(), text, isComplete: false },
+    ]);
   }
 
   return (
