@@ -5,7 +5,7 @@ import styles from "./style";
 export default function Todo({ id, text, isComplete }) {
   return (
     <View style={styles.todoContainer}>
-      <Text>{text}</Text>
+      <Text style={styles.todoTitle}>{text}</Text>
     </View>
   );
 }
