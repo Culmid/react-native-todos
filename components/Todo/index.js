@@ -11,7 +11,7 @@ export default function Todo({ id, text, isComplete, onToggleTodo }) {
     <Pressable onPress={onTodoPress}>
       <View style={styles.todoContainer}>
         <Text style={styles.todoTitle}>{text}</Text>
-        <Switch value={isComplete} />
+        <Switch value={isComplete} onValueChange={onTodoPress} />
       </View>
     </Pressable>
   );
